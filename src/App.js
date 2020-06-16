@@ -1,26 +1,51 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import {
+  BrowserRouter as Router,
+  Route
+} from 'react-router-dom';
+import {connect } from 'react-redux'
+import { fetchQuests } from './actions/quests'
+import NavBar from './components/Navbar';
+import Home from './containers/Home';
+import ZorasDomain from './containers/ZorasDomain'
+import HyruleCastle from './containers/HyruleCastle'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+
+  componentDidMount() {
+    fetch(`http://localhost:3000/quests`)
+      .then(resp => resp.json())
+      .then(questsJSON => {
+        this.props.fetchQuests(questsJSON)
+      });
+  }
+
+
+
+  render() {
+    console.log(this.props)
+    return (
+     
+        <Router>
+          <div className="App">
+           <NavBar />
+            <Route exact path="/" component={Home} />
+            <Route exact path="/ZorasDomain" component={ZorasDomain}/>
+            <Route exact path="/HyruleCastle" component={HyruleCastle}/>
+            
+         </div>
+        </Router>
+    )
+  }
 }
 
-export default App;
+const mapDispatchToProps = {
+  fetchQuests
+}
+
+export default connect(null, mapDispatchToProps) (App);
+
+
+  
+
+
