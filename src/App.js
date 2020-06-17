@@ -3,12 +3,13 @@ import {
   BrowserRouter as Router,
   Route
 } from 'react-router-dom';
-import {connect } from 'react-redux'
+import { connect } from 'react-redux'
 import { fetchQuests } from './actions/quests'
 import NavBar from './components/Navbar';
 import Home from './containers/Home';
 import ZorasDomain from './containers/ZorasDomain'
 import HyruleCastle from './containers/HyruleCastle'
+import Form from './containers/Form'
 
 class App extends React.Component {
 
@@ -32,7 +33,7 @@ class App extends React.Component {
             <Route exact path="/" component={Home} />
             <Route exact path="/ZorasDomain" component={ZorasDomain}/>
             <Route exact path="/HyruleCastle" component={HyruleCastle}/>
-            
+            <Route exact path="/Form" component={Form}/>
          </div>
         </Router>
     )
