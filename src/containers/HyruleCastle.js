@@ -24,7 +24,7 @@ export class HyruleCastle extends Component {
   
   renderQuests = () => {
     return this.props.quests.filter(questObj => questObj.location === "Hyrule Castle").map(questObj => {
-      return <li><a key={questObj.id}>{questObj.content}</a><button>Edit</button><button onClick={() => this.handleDelete(questObj.id)}>Remove</button></li>
+      return <li key={questObj.id}><a>{questObj.content}</a><button>Edit</button><button onClick={() => this.handleDelete(questObj.id)}>Remove</button></li>
     })  
   }
 

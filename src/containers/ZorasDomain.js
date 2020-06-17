@@ -29,7 +29,7 @@ export class ZorasDomain extends Component {
   
   renderQuests = () => {
     return this.props.quests.filter(questObj => questObj.location === "Zoras Domain").map(questObj => {
-      return <li><a key={questObj.id}>{questObj.content}</a><button onClick={() => this.handleEdit(questObj)}>Edit</button><button onClick={() => this.handleDelete(questObj.id)}>Remove</button></li>
+      return <li key={questObj.id}><a >{questObj.content}</a><button onClick={() => this.handleEdit(questObj)}>Edit</button><button onClick={() => this.handleDelete(questObj.id)}>Remove</button></li>
     })  
   }
   
