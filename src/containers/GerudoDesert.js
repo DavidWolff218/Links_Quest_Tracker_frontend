@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
 import { removeQuest } from '../actions/quests'
 
-export class ZorasDomain extends Component {
-  
+export class GerudoDesert extends Component {
   
   handleDelete = (id) => {
     console.log(id)
@@ -23,24 +22,19 @@ export class ZorasDomain extends Component {
   }
   
   
-  handleEdit = () => [
-    console.log("edit")
-  ]
-  
   renderQuests = () => {
-    return this.props.quests.filter(questObj => questObj.location === "Zoras Domain").map(questObj => {
-      return <li><a key={questObj.id}>{questObj.content}</a><button onClick={() => this.handleEdit(questObj)}>Edit</button><button onClick={() => this.handleDelete(questObj.id)}>Remove</button></li>
+    return this.props.quests.filter(questObj => questObj.location === "Gerudo Desert").map(questObj => {
+      return <li><a key={questObj.id}>{questObj.content}</a><button>Edit</button><button onClick={() => this.handleDelete(questObj.id)}>Remove</button></li>
     })  
   }
-  
+
   
   render() {
+    
     return (
       <div>
-        Zoras Domain
-
-          {this.renderQuests()}
-          
+        Gerudo Desert Quests
+        {this.renderQuests()}
         <NavLink to="/Form">
           <button>
             Add a Quest
@@ -55,10 +49,8 @@ const mapStateToProps = state => {
   return { quests: state.quests }
 }
 
-
 const mapDispatchToProps = {
   removeQuest
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(ZorasDomain)
-
+export default connect(mapStateToProps, mapDispatchToProps)(GerudoDesert)

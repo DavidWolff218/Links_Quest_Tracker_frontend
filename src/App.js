@@ -9,6 +9,7 @@ import NavBar from './components/Navbar';
 import Home from './containers/Home';
 import ZorasDomain from './containers/ZorasDomain'
 import HyruleCastle from './containers/HyruleCastle'
+import GerudoDesert from './containers/GerudoDesert'
 import Form from './containers/Form'
 
 class App extends React.Component {
@@ -21,18 +22,15 @@ class App extends React.Component {
       });
   }
 
-
-
   render() {
-    console.log(this.props)
-    return (
-     
+    return (   
         <Router>
           <div className="App">
            <NavBar />
             <Route exact path="/" component={Home} />
             <Route exact path="/ZorasDomain" component={ZorasDomain}/>
             <Route exact path="/HyruleCastle" component={HyruleCastle}/>
+            <Route exact path="/GerudoDesert" component={GerudoDesert}/>
             <Route exact path="/Form" component={Form}/>
          </div>
         </Router>

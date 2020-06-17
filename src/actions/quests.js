@@ -11,3 +11,10 @@ export const fetchQuests = quests => {
     quests
   }
 }
+
+export const removeQuest = questId => {
+  return {
+    type: 'REMOVE_QUEST',
+    questId
+  }
+}
