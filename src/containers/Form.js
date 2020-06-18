@@ -54,13 +54,21 @@ export class Form extends Component {
   render() {
     return (
       <div>
-        <select multiple={false} onChange={this.handleDropChange}>
-          <option value={""}>Location</option>
-          <option value={"Hyrule Castle"}>Hyrule Castle</option>
-          <option value={"Zoras Domain"}>Zoras Domain</option>
-          <option value={"Gerudo Desert"}>Gerudo Desert</option>
-        </select>
-        <form className="form" onSubmit={this.handleSubmit}>
+        <form className="radioinput" onChange={this.handleDropChange}>
+          <label>
+          <input type="radio" value={"Hyrule Castle"}/>
+          Hyrule Castle
+          </label>
+          <label>
+          <input type="radio" value={"Zoras Domain"}/>
+          Zoras Domain
+          </label>
+          <label>
+          <input type="radio" value={"Gerudo Desert"}/>
+          Gerudo Desert
+          </label>
+        </form>
+        <form className="text-form" onSubmit={this.handleSubmit}>
           <textarea
             className="new-quest-input"
             onChange={this.handleChange}
