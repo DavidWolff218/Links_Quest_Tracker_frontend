@@ -99,6 +99,3 @@ const mapStateToProps = (state) => {
 
 export default connect(mapStateToProps, mapDispatchToProps)(EditForm);
 
-// const mapStateToProps = (state) => {
-//   return { quests: state.quests, locations: state.locations };
-// };
