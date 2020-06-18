@@ -12,6 +12,13 @@ export const fetchQuests = quests => {
   }
 }
 
+export const editQuest = quest => {
+  return {
+    type: 'EDIT_QUEST',
+    quest
+  }
+}
+
 export const removeQuest = questId => {
   return {
     type: 'REMOVE_QUEST',
