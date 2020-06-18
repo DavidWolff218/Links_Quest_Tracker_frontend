@@ -66,12 +66,20 @@ export class EditForm extends Component {
   render() {
     return (
       <div>
-        <select multiple={false} onChange={this.handleDropChange}>
-          <option value={""}>Location</option>
-          <option value={"Hyrule Castle"}>Hyrule Castle</option>
-          <option value={"Zoras Domain"}>Zoras Domain</option>
-          <option value={"Gerudo Desert"}>Gerudo Desert</option>
-        </select>
+        <form className="radioinput" onChange={this.handleDropChange}>
+          <label>
+          <input type="radio" value={"Hyrule Castle"} checked={this.state.location === "Hyrule Castle"}/>
+          Hyrule Castle
+          </label>
+          <label>
+          <input type="radio" value={"Zoras Domain"} checked={this.state.location === "Zoras Domain"}/>
+          Zoras Domain
+          </label>
+          <label>
+          <input type="radio" value={"Gerudo Desert"} checked={this.state.location === "Gerudo Dessert"}/>
+          Gerudo Desert
+          </label>
+        </form>
         <form className="form" onSubmit={this.handleSubmit}>
           <textarea
             className="new-quest-input"

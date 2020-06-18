@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 import { removeQuest } from '../actions/quests'
 
 export class HyruleCastle extends Component {
@@ -24,7 +24,7 @@ export class HyruleCastle extends Component {
   
   renderQuests = () => {
     return this.props.quests.filter(questObj => questObj.location === "Hyrule Castle").map(questObj => {
-      return <li key={questObj.id}><a>{questObj.content}</a><button>Edit</button><button onClick={() => this.handleDelete(questObj.id)}>Remove</button></li>
+      return <li key={questObj.id}><a>{questObj.content}</a><button><Link to={`EditForm/${questObj.id}`}>Edit</Link></button><button onClick={() => this.handleDelete(questObj.id)}>Remove</button></li>
     })  
   }
 
@@ -35,11 +35,11 @@ export class HyruleCastle extends Component {
       <div>
         Hyrule Castle Quests
         {this.renderQuests()}
-        <NavLink to="/Form">
+        <Link to="/Form">
           <button>
             Add a Quest
           </button>
-        </NavLink>
+        </Link>
       </div>
     )
   }
