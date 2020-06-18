@@ -2,30 +2,28 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { addQuest } from "../actions/quests";
 
-
 export class Form extends Component {
   state = {
     quest: "",
-    location: ""
+    location: "",
   };
 
   handleDropChange = (event) => {
     this.setState({
-      location: event.target.value
+      location: event.target.value,
     });
   };
 
   handleChange = (event) => {
     this.setState({
-      quest: event.target.value
+      quest: event.target.value,
     });
   };
 
-  
   handleSubmit = (event) => {
     event.preventDefault();
-    let location_render = this.state.location.replace(/\s+/,"")
-  
+    let location_render = this.state.location.replace(/\s+/, "");
+
     const newQuest = {
       content: this.state.quest,
       location_name: this.state.location,
@@ -36,7 +34,7 @@ export class Form extends Component {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({quest: newQuest}),
+      body: JSON.stringify({ quest: newQuest }),
     };
 
     fetch("http://localhost:3000/quests", reqObj)
@@ -48,24 +46,25 @@ export class Form extends Component {
           location: "",
         });
       });
-      this.props.history.push(`/${location_render}`)
+    this.props.history.push(`/${location_render}`);
   };
 
   render() {
+    
     return (
       <div>
         <form className="radioinput" onChange={this.handleDropChange}>
           <label>
-          <input type="radio" value={"Hyrule Castle"}/>
-          Hyrule Castle
+            <input type="radio" value={"Hyrule Castle"} />
+            Hyrule Castle
           </label>
           <label>
-          <input type="radio" value={"Zoras Domain"}/>
-          Zoras Domain
+            <input type="radio" value={"Zoras Domain"} />
+            Zoras Domain
           </label>
           <label>
-          <input type="radio" value={"Gerudo Desert"}/>
-          Gerudo Desert
+            <input type="radio" value={"Gerudo Desert"} />
+            Gerudo Desert
           </label>
         </form>
         <form className="text-form" onSubmit={this.handleSubmit}>
@@ -83,15 +82,6 @@ export class Form extends Component {
       </div>
     );
   }
-}
-
-{
-  /* <form className="form" onSubmit={this.handleSubmit}>
-<input 
-  onChange={this.handleChange}
-  className='new-todo' 
-  type='text' 
-  placeholder='add a todo' value={this.state.task}/> */
 }
 
 const mapDispatchToProps = {

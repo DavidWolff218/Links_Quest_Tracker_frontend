@@ -12,6 +12,7 @@ import HyruleCastle from './containers/HyruleCastle'
 import GerudoDesert from './containers/GerudoDesert'
 import Form from './containers/Form'
 import EditForm from './containers/EditForm'
+import './App.css'
 
 class App extends React.Component {
 
@@ -26,7 +27,7 @@ class App extends React.Component {
   render() {
     return (   
         <Router>
-          <div className="App">
+          <div >
            <NavBar />
             <Route exact path="/" component={Home} />
             <Route exact path="/ZorasDomain" component={ZorasDomain}/>
