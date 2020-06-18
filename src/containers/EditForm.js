@@ -76,7 +76,7 @@ export class EditForm extends Component {
           Zoras Domain
           </label>
           <label>
-          <input type="radio" value={"Gerudo Desert"} checked={this.state.location === "Gerudo Dessert"}/>
+          <input type="radio" value={"Gerudo Desert"} checked={this.state.location === "Gerudo Desert"}/>
           Gerudo Desert
           </label>
         </form>

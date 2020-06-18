@@ -35,7 +35,7 @@ export class HyruleCastle extends Component {
       <div>
         Hyrule Castle Quests
         {this.renderQuests()}
-        <Link to="/Form">
+        <Link to="/Form" location={"Hyrule Castle"}>
           <button>
             Add a Quest
           </button>
