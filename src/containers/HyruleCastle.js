@@ -6,7 +6,6 @@ import { removeQuest } from '../actions/quests'
 export class HyruleCastle extends Component {
   
   handleDelete = (id) => {
-    console.log(id)
     const reqObj = {
       method: "DELETE",
       headers: {
@@ -27,15 +26,16 @@ export class HyruleCastle extends Component {
       return <li key={questObj.id}><a>{questObj.content}</a><button><Link to={`EditForm/${questObj.id}`}>Edit</Link></button><button onClick={() => this.handleDelete(questObj.id)}>Remove</button></li>
     })  
   }
-
   
   render() {
     
     return (
       <div>
-        Hyrule Castle Quests
+       <a className="quests-title"> Hyrule Castle Quests </a>
+        <a className="quests-container">
         {this.renderQuests()}
-        <Link to="/Form" location={"Hyrule Castle"}>
+        </a><br></br>
+        <Link to="/Form/hyrule_castle" >
           <button>
             Add a Quest
           </button>
@@ -55,12 +55,3 @@ const mapDispatchToProps = {
 
 export default connect(mapStateToProps, mapDispatchToProps)(HyruleCastle)
 
-
-// renderQuests = () => {
-//   return this.props.quests.filter(questObj => {
-//     if(questObj.location === "Hyrule Castle") {
-//       return <li>{questObj.content}</li>
-//     } else {
-//       return null
-//     }
-//   })

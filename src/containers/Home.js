@@ -31,7 +31,7 @@ export class home extends Component {
             <a className="card-title">Hyrule Castle</a>
             <br></br>
             <a>
-              Quests:
+              Quests: 
               {
                 this.props.quests.filter(
                   (questObj) => questObj.location === "Hyrule Castle"

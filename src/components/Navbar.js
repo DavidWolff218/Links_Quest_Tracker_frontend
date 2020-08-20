@@ -9,7 +9,7 @@ const NavBar = () => {
         {/* <li><NavLink to="/ZorasDomain">Zoras Domain</NavLink></li> */}
         {/* <li><NavLink to="/HyruleCastle">Hyrule Castle</NavLink></li>
         <li><NavLink to="/GerudoDesert">Gerudo Desert</NavLink></li> */}
-        <li><NavLink to="/Form">Add a Quest</NavLink></li>
+        <li><NavLink to="/Form/nav">Add a Quest</NavLink></li>
       </ul>
     </div>
   );

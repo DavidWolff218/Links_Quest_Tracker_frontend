@@ -6,7 +6,6 @@ import { removeQuest } from '../actions/quests'
 export class GerudoDesert extends Component {
   
   handleDelete = (id) => {
-    console.log(id)
     const reqObj = {
       method: "DELETE",
       headers: {
@@ -33,9 +32,9 @@ export class GerudoDesert extends Component {
     
     return (
       <div>
-        Gerudo Desert Quests
+         <a className="quests-title"> Gerudo Desert Quests </a>
         {this.renderQuests()}
-        <Link to="/Form">
+        <Link to="/Form/gerudo_desert">
           <button>
             Add a Quest
           </button>
