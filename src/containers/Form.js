@@ -8,6 +8,14 @@ export class Form extends Component {
     location: "",
   };
 
+// componentDidMount(){
+//  let newLocation = this.props.match.params.location.replace(/_/g," ")
+//  this.setState({
+//    location: newLocation
+//  })
+ 
+// }
+  
   handleDropChange = (event) => {
     this.setState({
       location: event.target.value,
@@ -15,6 +23,7 @@ export class Form extends Component {
   };
 
   handleChange = (event) => {
+    
     this.setState({
       quest: event.target.value,
     });
@@ -50,16 +59,15 @@ export class Form extends Component {
   };
 
   render() {
-    
     return (
       <div>
         <form className="radioinput" onChange={this.handleDropChange}>
           <label>
-            <input type="radio" value={"Hyrule Castle"} />
+            <input type="radio" value={"Hyrule Castle"}  />
             Hyrule Castle
           </label>
           <label>
-            <input type="radio" value={"Zoras Domain"} />
+            <input type="radio" value={"Zoras Domain"}  />
             Zoras Domain
           </label>
           <label>
@@ -93,3 +101,6 @@ const mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Form);
+
+
+// checked={this.props.match.params.location === "hyrule_castle"}

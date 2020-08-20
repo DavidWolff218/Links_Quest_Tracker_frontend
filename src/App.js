@@ -35,7 +35,7 @@ class App extends React.Component {
             <Route exact path="/ZorasDomain" component={ZorasDomain}/>
             <Route exact path="/HyruleCastle" component={HyruleCastle}/>
             <Route exact path="/GerudoDesert" component={GerudoDesert}/>
-            <Route exact path="/Form" component={Form}/>
+            <Route exact path="/Form/:location" component={Form}/>
             <Route exact path="/EditForm/:id" component={EditForm}/>
          </div>
         </Router>
