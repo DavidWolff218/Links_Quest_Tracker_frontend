@@ -39,7 +39,7 @@ export class HyruleCastle extends Component {
 
   render() {
     return (
-      <div>
+      <div className="quests-box">
         <a className="quests-title"> Hyrule Castle Quests </a>
         <a className="quests-container">{this.renderQuests()}</a>
         <br></br>

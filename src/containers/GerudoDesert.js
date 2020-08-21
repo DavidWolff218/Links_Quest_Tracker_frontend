@@ -39,7 +39,7 @@ export class GerudoDesert extends Component {
 
   render() {
     return (
-      <div>
+      <div className="quests-box">
         <a className="quests-title"> Gerudo Desert Quests </a>
         {this.renderQuests()}
         <Link to="/Form/gerudo_desert">

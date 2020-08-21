@@ -39,7 +39,7 @@ export class ZorasDomain extends Component {
 
   render() {
     return (
-      <div>
+      <div className="quests-box">
         <a className="quests-title"> Zoras Domain Quests </a>
 
         {this.renderQuests()}

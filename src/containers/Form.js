@@ -60,7 +60,7 @@ export class Form extends Component {
 
   render() {
     return (
-      <div>
+      <div className="add-form">
         <form className="radioinput" onChange={this.handleDropChange}>
           <label>
             <input type="radio" value={"Hyrule Castle"}  />

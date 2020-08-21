@@ -17,7 +17,7 @@
 }
 
 .navtext {
-  
+
 }
 
 .login-body {
@@ -83,8 +83,6 @@
   width: 250px;
   text-align: center;
   padding-top: 20px;
-  left:590px; 
-  top:230px;
 }
 
 .login-text{
@@ -104,15 +102,30 @@
   text-align: center;
 } 
 
-/* .quests-container{
+.quests-box{
   position:fixed; 
   background-color: white; opacity: 0.5;
-  width: 500px;
+  width: 300px;
   height: auto;
   text-align: center;
   border-style: solid;
   border-color: burlywood;
   margin: 20px;
   padding: 20px;
-} */ 
+  left:590px; 
+  top:230px;
+} 
 
+.add-form{
+  position:fixed; 
+  background-color: white; opacity: 0.5;
+  width: 300px;
+  height: auto;
+  text-align: center;
+  border-style: solid;
+  border-color: burlywood;
+  margin: 20px;
+  padding: 20px;
+  left:590px; 
+  top:230px;
+}
