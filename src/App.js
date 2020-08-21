@@ -25,7 +25,7 @@ class App extends React.Component {
     return (
       <Router>
         <Route exact path="/" component={Login} />
-        <div>
+        
           <NavBar />
           <Route exact path="/Home" component={Home} />
           <Route exact path="/ZorasDomain" component={ZorasDomain} />
@@ -33,7 +33,7 @@ class App extends React.Component {
           <Route exact path="/GerudoDesert" component={GerudoDesert} />
           <Route exact path="/Form/:location" component={Form} />
           <Route exact path="/EditForm/:id" component={EditForm} />
-        </div>
+        
       </Router>
     );
   }
