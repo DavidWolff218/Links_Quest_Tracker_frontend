@@ -60,6 +60,7 @@ export class Form extends Component {
 
   render() {
     return (
+      <div className="formPage">
       <div className="add-form">
         <form className="radioinput" onChange={this.handleDropChange}>
           <label>
@@ -87,6 +88,7 @@ export class Form extends Component {
             <button type="submit">Add Quest</button>
           </a>
         </form>
+      </div>
       </div>
     );
   }

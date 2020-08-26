@@ -153,3 +153,10 @@
   left:590px; 
   top:230px;
 }
+
+.formPage{
+  background: url("https://i.stack.imgur.com/HonLJ.jpg") no-repeat center fixed;
+  background-size: 100%;
+  height: 100vh;
+  width: 100vw;
+}
