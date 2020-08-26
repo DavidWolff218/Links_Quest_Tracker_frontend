@@ -9,7 +9,9 @@ export class Form extends Component {
   };
 
 componentDidMount(){
- let newLocation = this.props.match.params.location.replace(/_/g," ")
+ let location = this.props.match.params.location.replace(/_/g," ").split(" ")
+ let newLocation = location.map((s) => s.charAt(0).toUpperCase()+ s.substring(1)).join(' ')
+console.log("cscac", newLocation)
  this.setState({
    location: newLocation
  })
@@ -59,20 +61,21 @@ componentDidMount(){
   };
 
   render() {
+    console.log("hello", this.state.location)
     return (
-      <div className="formPage">
+     <div className="formPage">
       <div className="add-form">
         <form className="radioinput" onChange={this.handleDropChange}>
           <label>
-            <input type="radio" value={"Hyrule Castle"}  />
+            <input type="radio" value={"Hyrule Castle"}  checked={this.state.location === "Hyrule Castle"}  />
             Hyrule Castle
           </label>
           <label>
-            <input type="radio" value={"Zoras Domain"}  />
+            <input type="radio" value={"Zoras Domain"} checked={this.state.location === "Zoras Domain"} />
             Zoras Domain
           </label>
           <label>
-            <input type="radio" value={"Gerudo Desert"} />
+            <input type="radio" value={"Gerudo Desert"} checked={this.state.location === "Gerudo Desert"}/>
             Gerudo Desert
           </label>
         </form>
