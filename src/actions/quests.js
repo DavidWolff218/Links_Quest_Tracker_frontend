@@ -30,10 +30,6 @@ export const removeQuest = (questId) => {
           body: JSON.stringify({ questId }),
         };
         fetch(`http://localhost:3000/quests/${questId}`, reqObj)
-          .then((resp) => resp.json())
-          .then((quest) => {
-            this.props.removeQuest(quest.id);
-          });
   };
 };
 
