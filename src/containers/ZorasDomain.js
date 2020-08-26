@@ -4,10 +4,9 @@ import { Link } from "react-router-dom";
 import { removeQuest } from "../actions/quests";
 
 export class ZorasDomain extends Component {
-  
-    handleDelete = (questId) => {
-      this.props.removeQuest(questId)
-     };
+  handleDelete = (questId) => {
+    this.props.removeQuest(questId);
+  };
 
   renderQuests = () => {
     return this.props.quests
@@ -29,16 +28,16 @@ export class ZorasDomain extends Component {
 
   render() {
     return (
-     <div className="zoraPage">
-     <div className="quests-box">
-        <a className="quests-title"> Zoras Domain Quests </a>
+      <div className="zoraPage">
+        <div className="quests-box">
+          <a className="quests-title"> Zoras Domain Quests </a>
 
-        {this.renderQuests()}
+          {this.renderQuests()}
 
-        <Link to="/Form/zoras_domain">
-          <button>Add a Quest</button>
-        </Link>
-      </div>
+          <Link to="/Form/zoras_domain">
+            <button>Add a Quest</button>
+          </Link>
+        </div>
       </div>
     );
   }

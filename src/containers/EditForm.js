@@ -65,7 +65,8 @@ export class EditForm extends Component {
 
   render() {
     return (
-      <div>
+      <div className="formPage">
+      <div className="add-form">
         <form className="radioinput" onChange={this.handleDropChange}>
           <label>
           <input type="radio" value={"Hyrule Castle"} checked={this.state.location === "Hyrule Castle"}/>
@@ -80,7 +81,7 @@ export class EditForm extends Component {
           Gerudo Desert
           </label>
         </form>
-        <form className="form" onSubmit={this.handleSubmit}>
+        <form className="" onSubmit={this.handleSubmit}>
           <textarea
             className="new-quest-input"
             onChange={this.handleChange}
@@ -92,6 +93,7 @@ export class EditForm extends Component {
             <button type="submit">Edit Quest</button>
           </a>
         </form>
+      </div>
       </div>
     );
   }

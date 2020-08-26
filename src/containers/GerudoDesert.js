@@ -4,9 +4,8 @@ import { Link } from "react-router-dom";
 import { removeQuest } from "../actions/quests";
 
 export class GerudoDesert extends Component {
-  
   handleDelete = (id) => {
-   this.props.removeQuest(id)
+    this.props.removeQuest(id);
   };
 
   renderQuests = () => {
@@ -30,13 +29,13 @@ export class GerudoDesert extends Component {
   render() {
     return (
       <div className="gerudoPage">
-      <div className="quests-box">
-        <a className="quests-title"> Gerudo Desert Quests </a>
-        {this.renderQuests()}
-        <Link to="/Form/gerudo_desert">
-          <button>Add a Quest</button>
-        </Link>
-      </div>
+        <div className="quests-box">
+          <a className="quests-title"> Gerudo Desert Quests </a>
+          {this.renderQuests()}
+          <Link to="/Form/gerudo_desert">
+            <button>Add a Quest</button>
+          </Link>
+        </div>
       </div>
     );
   }

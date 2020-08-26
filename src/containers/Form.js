@@ -8,13 +8,13 @@ export class Form extends Component {
     location: "",
   };
 
-// componentDidMount(){
-//  let newLocation = this.props.match.params.location.replace(/_/g," ")
-//  this.setState({
-//    location: newLocation
-//  })
- 
-// }
+componentDidMount(){
+ let newLocation = this.props.match.params.location.replace(/_/g," ")
+ this.setState({
+   location: newLocation
+ })
+ console.log(newLocation)
+}
   
   handleDropChange = (event) => {
     this.setState({

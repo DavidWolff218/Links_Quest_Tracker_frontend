@@ -4,11 +4,10 @@ import { Link } from "react-router-dom";
 import { removeQuest } from "../actions/quests";
 
 export class HyruleCastle extends Component {
-  
   handleDelete = (id) => {
-    this.props.removeQuest(id)
-   };
- 
+    this.props.removeQuest(id);
+  };
+
   renderQuests = () => {
     return this.props.quests
       .filter((questObj) => questObj.location === "Hyrule Castle")
