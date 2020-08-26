@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { removeQuest } from "../actions/quests";
 
 export class GerudoDesert extends Component {
+  
   handleDelete = (id) => {
    this.props.removeQuest(id)
   };

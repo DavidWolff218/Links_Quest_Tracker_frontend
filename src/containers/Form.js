@@ -104,5 +104,3 @@ const mapStateToProps = (state) => {
 
 export default connect(mapStateToProps, mapDispatchToProps)(Form);
 
-
-// checked={this.props.match.params.location === "hyrule_castle"}
