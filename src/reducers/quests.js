@@ -6,8 +6,8 @@ export default (state = [], action) => {
     case "ADD_QUEST":
       return [...state, { ...action.quest }];
 
-    case "REMOVE_QUEST":
-      return state.filter((quest) => quest.id !== action.questId);
+    case "REMOVE_QUEST": 
+    return state.filter((quest) => quest.id !== action.id);
 
     case "EDIT_QUEST":
       return state.map((questObj) => {

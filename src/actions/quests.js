@@ -19,17 +19,18 @@ export const editQuest = (quest) => {
   };
 };
 
-export const removeQuest = (questId) => {
+export const removeQuest = (id) => {
+  console.log("HERE", id)
   return (dispatch) => {
-    dispatch ({type: "REMOVE_QUEST", questId})
+    dispatch ({type: "REMOVE_QUEST", id})
     const reqObj = {
           method: "DELETE",
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ questId }),
+          body: JSON.stringify({ id }),
         };
-        fetch(`http://localhost:3000/quests/${questId}`, reqObj)
+        fetch(`http://localhost:3000/quests/${id}`, reqObj)
   };
 };
 
