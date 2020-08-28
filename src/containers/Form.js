@@ -11,7 +11,6 @@ export class Form extends Component {
 componentDidMount(){
  let location = this.props.match.params.location.replace(/_/g," ").split(" ")
  let newLocation = location.map((s) => s.charAt(0).toUpperCase()+ s.substring(1)).join(' ')
-console.log("cscac", newLocation)
  this.setState({
    location: newLocation
  })
