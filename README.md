@@ -6,7 +6,7 @@ This was made as a final project for our mod on React-Redux. It is the classic R
 
 ### Usage
 
-- On the login you will be instructed to login. Sorry, the only name that it will accept is "Link".
+- On the login page you will be instructed to enter a username. Sorry, the only name that it will accept is "Link".
 - From the homepage you can see how many quests are avaiable in each area, and then select an area to see the specific quests.
 - On an areas quest page you can also edit or delete specific quests.
 - From the "Add a Quest" page you can select which area you want to add a quest to.
