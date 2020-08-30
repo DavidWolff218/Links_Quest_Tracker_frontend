@@ -1,6 +1,15 @@
 ## Link's Quest Tracker
 
-*README UNDER CONSTRUCTION*
+This was made as a final project for our mod on React-Redux. It is the classic Redux to-do app, but with my own twist put on it.
+
+[Links Quest Tracker backend](https://github.com/DavidWolff218/Links_Quest_Tracker_backend)
+
+### Usage
+
+- On the login you will be instructed to login. Sorry, the only name that it will accept is "Link".
+- From the homepage you can see how many quests are avaiable in each area, and then select an area to see the specific quests.
+- On an areas quest page you can also edit or delete specific quests.
+- From the "Add a Quest" page you can select which area you want to add a quest to.
 
 ### Screenshots
 
