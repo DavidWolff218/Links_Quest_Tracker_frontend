@@ -30,8 +30,8 @@ export class HyruleCastle extends Component {
     return (
       <div className="castlePage">
         <div className="quests-box">
-          <a className="quests-title"> Hyrule Castle Quests </a>
-          <a className="quests-container">{this.renderQuests()}</a>
+          <span className="quests-title"> Hyrule Castle Quests </span>
+          <span className="quests-container">{this.renderQuests()}</span>
           <br></br>
           <Link to="/Form/hyrule_castle">
             <button>Add a Quest</button>
