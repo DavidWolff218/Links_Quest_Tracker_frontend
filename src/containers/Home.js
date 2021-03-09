@@ -1,8 +1,18 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
+import { fetchQuests } from "../actions/quests";
+
 
 export class home extends Component {
+  componentDidMount() {
+    fetch(`http://localhost:3000/quests`)
+      .then((resp) => resp.json())
+      .then((quests) => {
+        this.props.fetchQuests(quests);
+      });
+  }
+
   render() {
     return (
       <html>
@@ -67,4 +77,8 @@ const mapStateToProps = (state) => {
   return { quests: state.quests };
 };
 
-export default connect(mapStateToProps)(home);
+const mapDispatchToProps = {
+  fetchQuests
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(home);

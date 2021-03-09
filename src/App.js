@@ -13,13 +13,6 @@ import EditForm from "./containers/EditForm";
 import "./App.css";
 
 class App extends React.Component {
-  componentDidMount() {
-    fetch(`http://localhost:3000/quests`)
-      .then((resp) => resp.json())
-      .then((questsJSON) => {
-        this.props.fetchQuests(questsJSON);
-      });
-  }
 
   render() {
     return (
