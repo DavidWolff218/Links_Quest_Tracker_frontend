@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { connect } from "react-redux";
 import { fetchQuests } from "./actions/quests";
 import NavBar from "./components/Navbar";
@@ -16,18 +16,20 @@ class App extends React.Component {
 
   render() {
     return (
-      <Router>
-        <Route exact path="/" component={Login} />
-        
-          <NavBar />
-          <Route exact path="/Home" component={Home} />
-          <Route exact path="/ZorasDomain" component={ZorasDomain} />
-          <Route exact path="/HyruleCastle" component={HyruleCastle} />
-          <Route exact path="/GerudoDesert" component={GerudoDesert} />
-          <Route exact path="/Form/:location" component={Form} />
-          <Route exact path="/EditForm/:id" component={EditForm} />
-        
-      </Router>
+      <BrowserRouter>
+            <NavBar />
+        <Switch>
+          <Route exact path="/" component={Login} />
+          
+            <Route exact path="/Home" component={Home} />
+            <Route exact path="/ZorasDomain" component={ZorasDomain} />
+            <Route exact path="/HyruleCastle" component={HyruleCastle} />
+            <Route exact path="/GerudoDesert" component={GerudoDesert} />
+            <Route exact path="/Form/:location" component={Form} />
+            <Route exact path="/EditForm/:id" component={EditForm} />
+          
+        </Switch>
+      </BrowserRouter>
     );
   }
 }
@@ -37,3 +39,22 @@ const mapDispatchToProps = {
 };
 
 export default connect(null, mapDispatchToProps)(App);
+
+
+
+// return (
+//   
+//     <Router>
+//       <Route exact path="/" component={Login} />
+      
+//         <NavBar />
+//         <Route exact path="/Home" component={Home} />
+//         <Route exact path="/ZorasDomain" component={ZorasDomain} />
+//         <Route exact path="/HyruleCastle" component={HyruleCastle} />
+//         <Route exact path="/GerudoDesert" component={GerudoDesert} />
+//         <Route exact path="/Form/:location" component={Form} />
+//         <Route exact path="/EditForm/:id" component={EditForm} />
+      
+//     </Router>
+//  
+// );
