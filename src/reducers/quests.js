@@ -1,7 +1,6 @@
 export default (state = [], action) => {
   switch (action.type) {
     case "FETCH_QUESTS":
-      console.log(action.quests)
       return [...action.quests];
 
     case "ADD_QUEST":
