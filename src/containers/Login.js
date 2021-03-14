@@ -25,7 +25,6 @@ export class Login extends Component {
   };
 
   render() {
-
     return (
       <div className="login-body">
         <form className="login" onSubmit={this.handleSubmit}>
