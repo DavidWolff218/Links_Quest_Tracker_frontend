@@ -2,9 +2,6 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { fetchQuests } from "../actions/quests";
-import NavBar from "../components/Navbar";
-
-
 
 export class home extends Component {
   componentDidMount() {
@@ -18,7 +15,6 @@ export class home extends Component {
   render() {
     return (
       <html>
-         {/* <NavBar /> */}
         <body className="Home">
           <Link
             to="/ZorasDomain"
@@ -81,7 +77,7 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = {
-  fetchQuests
-}
+  fetchQuests,
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(home);

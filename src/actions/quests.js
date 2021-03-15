@@ -20,16 +20,15 @@ export const editQuest = (quest) => {
 };
 
 export const removeQuest = (id) => {
-  console.log("HERE", id)
   return (dispatch) => {
-    dispatch ({type: "REMOVE_QUEST", id})
+    dispatch({ type: "REMOVE_QUEST", id });
     const reqObj = {
-          method: "DELETE",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ id }),
-        };
-        fetch(`http://localhost:3000/quests/${id}`, reqObj)
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ id }),
+    };
+    fetch(`http://localhost:3000/quests/${id}`, reqObj);
   };
 };
